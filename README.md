@@ -1,6 +1,4 @@
-# COVID-SAFE CODE
-
-We can divide the connection between Prolog and the user in the following: First, the user makes request to our Web Application using https. Then we load the HTML content, which starts a web socket and connects to our Python backend. In the backend, we run Prolog, load our KB, and start our query. For each askable, we send and wait for a response from our user. We unify each variable with the user response and repeat until we resolve the query. We send our result back to the user.
+Roadmap: First, the user makes request to our Web Application using https. Then we load the HTML content, which starts a web socket and connects to our Python backend. In the backend, we run Prolog, load our KB, and start our query. For each askable, we send and wait for a response from our user. We unify each variable with the user response and repeat until we resolve the query. We send our result back to the user.
 
 We ran the code by connecting Prolog to pyswip. To run pyswip using Django's Web Sockets, we had to change the threading of pyswip by inheriting its Prolog class and creating a new thread. This new thread allowed the front-end to communicate with the backend while still running Prolog unification.
 
